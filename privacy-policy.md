@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Effective date:** July 10, 2026
+**Effective date:** August 27, 2026
 
 LampedUp ("we," "us," or "our") operates the Buckets mobile application (the "App"). Buckets is operated by LampedUp, a business of Justin Prappas (the App Store seller of record). This Privacy Policy explains what information the App collects, how it is used, and your choices. By using Buckets, you agree to the practices described here.
 
@@ -53,7 +53,7 @@ We rely on the following service providers to operate the App. Each processes da
 
 ## 4. Data Storage and Security
 
-Your account and financial data are stored in our Supabase-hosted database, protected by row-level security policies that restrict access to your own data. Bank access tokens issued by Plaid are held only on our server (never on your device) and are never exposed to the iOS app. Infrastructure-level encryption (in transit via TLS/HTTPS, and at the storage-provider level) protects data. We do not claim any additional application-layer encryption of stored tokens beyond what our infrastructure provider supplies.
+Your account and financial data are stored in our Supabase-hosted database, protected by row-level security policies that restrict access to your own data. Bank access tokens issued by Plaid are held only on our server (never on your device) and are never exposed to the iOS app. Infrastructure-level encryption (in transit via TLS/HTTPS, and at the storage-provider level) protects data. In addition, bank access tokens are encrypted at the application layer using Supabase Vault before they are ever written to the database — the stored record holds only an opaque reference, not the token itself. This protects your bank access token even in the unlikely event a database backup or export were exposed. It does not replace the server-side access controls described above, which remain the primary safeguard against unauthorized access.
 
 ## 5. Data Retention and Deletion
 
